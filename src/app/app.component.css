@@ -1,0 +1,297 @@
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@font-face {
+    font-family: Kdam Thmor Pro;
+    src: url(../assets/KdamThmorPro-Regular.ttf);
+}
+.logo{
+    width: 96px;
+    height: auto;
+}
+.imgProfile{
+    width: 56px;
+    height: 56px;
+    border: 2px solid rgb(125, 0, 159);
+    border-radius: 100px;
+}
+ul, li{
+    display: inline-block;
+    margin-left: 1rem;
+    color: rgb(125, 0, 159);
+    font-family: Mooli;
+    cursor: pointer;
+}
+.link__selecionado{
+    color: rgb(125, 0, 159);
+    border-bottom: 2px solid rgb(125, 0, 159);
+    padding-bottom: 5px;
+}
+h1{
+    text-align: center;
+    font-family: Kdam Thmor Pro;
+    font-size: 3rem;
+    color: rgb(125, 0, 159);
+}
+.search{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    height: 40px;
+    border-radius: 8px;
+    border: 2px solid rgb(125, 0, 159);
+    padding: 4px;
+    gap: 8px;
+    align-items: center;
+}
+.inputPrincipal{
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.btn__search{
+    background-color: rgb(125, 0, 159);
+    height: 100%;
+    border-radius: 8px;
+    font-family: Fredoka;
+    color: rgb(253, 253, 253);
+}
+main{
+    width: 81%;
+    margin: auto;
+    display: flex;
+    padding-top: 48px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+select{
+    width: 180px;
+    height: auto;
+    padding: 10px;
+    border: 2px solid rgb(125, 0, 159);
+    border-radius: 4px;
+}
+label{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: Mooli;
+    margin-bottom: 4px;
+}
+h4{
+    color: black;
+    font-family: Kdam Thmor Pro;
+}
+h3{
+    color: black;
+    font-family: Kdam Thmor Pro;
+}
+h2{
+    color: black;
+    font-family: Kdam Thmor Pro;
+}
+.cardPokemon{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px;
+    border: 2px solid rgb(125, 0, 159);
+    border-radius: 8px;
+    margin-bottom: 24px;
+    margin-right: 48px;
+    margin-left: 48px;
+
+}
+.info{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.photoPokemon{
+    width: 200px;
+    height: 200px;
+}
+.Grama{
+    display: inline;
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(1, 255, 31);
+    color: black;
+    margin-right: 4px;
+}
+.Inseto{
+    display: inline;
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(104, 252, 122);
+    color: black;
+    margin-right: 4px;
+}
+.Psiquico{
+    display: inline;
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(208, 84, 165);
+    color: black;
+    margin-right: 4px;
+}
+.Fogo{
+    display: inline;
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(255, 174, 0);
+    color: black;
+    margin-right: 4px;
+}
+.Veneno{
+    display: inline;
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(251, 1, 255);
+    color: black;
+    margin-right: 4px;
+}
+.Eletrico{
+    display: inline;
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(238, 255, 1);
+    color: black;
+    margin-right: 4px;
+}
+.Agua{
+    display: inline;
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(0, 98, 255);
+    color: black;
+    margin-right: 4px;
+}
+.Voador{
+    display: inline;
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(116, 232, 255);
+    color: black;
+    margin-right: 4px;
+}
+.Lutador{
+    display: inline;
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(192, 156, 79);
+    color: black;
+    margin-right: 4px;
+}
+.Ferro{
+    display: inline;
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(164, 199, 168);
+    color: black;
+    margin-right: 4px;
+}
+.Fantasma{
+    display: inline;
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(71, 1, 133);
+    color: rgb(255, 255, 255);
+    margin-right: 4px;
+}
+.Gelo{
+    display: inline;
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(36, 229, 255);
+    color: black;
+    margin-right: 4px;
+}
+.Dragao{
+    display: inline;
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(4, 47, 149);
+    color: rgb(255, 255, 255);
+    margin-right: 4px;
+}
+.Dark{
+    display: inline;
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(60, 48, 4);
+    color: black;
+    margin-right: 4px;
+}
+.Normal{
+    display: inline;
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(236, 245, 237);
+    color: black;
+    margin-right: 4px;
+}
+.Pedra{
+    display: inline;
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(172, 187, 174);
+    color: black;
+    margin-right: 4px;
+}
+.Terra{
+    display: inline;
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(168, 143, 0);
+    color: black;
+    margin-right: 4px;
+}
+.Fada{
+    display: inline;
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(255, 1, 145);
+    color: black;
+    margin-right: 4px;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+}
+.content-container{
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px black;
+    max-width: 600px;
+    width: 80%;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ImgSelected{
+    width: 100px;
+    height: 100px;
+}
+.descriptionPkmn{
+    color: black;
+    font-family: Kdam Thmor Pro;
+}

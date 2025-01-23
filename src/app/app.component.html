@@ -1,0 +1,93 @@
+<nav>
+  <img [src]="logo" alt="Logo Pokemon" class="logo">
+  <ul>
+    <li *ngFor="let link of links" [ngClass]="{'link__selecionado': link === 'Pokedex'}">{{link}}</li>
+  </ul>
+  <img class="imgProfile" src={{imgProfile}} alt="Imagem do perfil">
+</nav>
+<h1>{{title}}</h1>
+<div class="search">
+  <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="24"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.552.5T200-580q0 75 52.5 127.5T380-400Z" fill="rgb (110, 5, 201)"/></svg>
+  <input [(ngModel)]="filterValue" class="inputPrincipal" type="text" placeholder="Pesquisar por nome...">
+  <button class="btn__search">Search</button>
+</div>
+<main>
+  <form>
+    <select name="tipoPokemon" id="tipo">
+      <option value="">Qualquer</option>
+      <option value="Agua">Agua</option>
+      <option value="Fogo">Fogo</option>
+      <option value="Terra">Terra</option>
+      <option value="Gelo">Gelo</option>
+      <option value="Veneno">Veneno</option>
+      <option value="Dark">Dark</option>
+      <option value="Fantasma">Fantasma</option>
+      <option value="Eletrico">Eletrico</option>
+      <option value="Grama">Grama</option>
+      <option value="Ferro">Ferro</option>
+      <option value="Inseto">Inseto</option>
+      <option value="Psiquico">Psiquico</option>
+      <option value="Fada">Fada</option>
+      <option value="Voador">Voador</option>
+      <option value="Lutador">Lutador</option>
+      <option value="Normal">Normal</option>
+      <option value="Pedra">Pedra</option>
+      <option value="Dragao">Dragão</option>
+    </select>
+    <select name="Formas Regionais" id="Regionais">
+      <option value="Padrão">Qualquer</option>
+      <option value="Padrão">Forma Padrão</option>
+      <option value="Galar">Forma Galar</option>
+      <option value="Alola">Froma Alola</option>
+      <option value="Hisui">Forma Hisui</option>
+      <option value="Paldea">Forma Paldea</option>
+     
+    </select>
+    <div>
+      <h3>Altura</h3>
+      <label>
+        <input type="checkbox" name="" id="pequeno" value="pequeno">Pequeno
+      </label>
+      <label>
+        <input type="checkbox" name="" id="medio" value="medio">Médio
+      </label>
+      <label>
+        <input type="checkbox" name="" id="grande" value="grande">Grande
+      </label>
+    </div>
+    <div>
+      <h3>Peso</h3>
+      <label>
+        <input type="checkbox" name="" id="Leve" value="leve">Pequeno
+      </label>
+      <label>
+        <input type="checkbox" name="" id="meio" value="meio">Meio a Meio
+      </label>
+      <label>
+        <input type="checkbox" name="" id="Pesado" value="pesado">Pesado
+      </label>
+    </div>
+  </form>
+  <section>
+    <ul>
+      <li class="cardPokemon" *ngFor="let pokemon of filteredPokemons()"(click)="showDetails(pokemon)">
+        <img class="photoPokemon" src={{pokemon.photo}} alt="">
+        <div class="Info">
+          <h2> {{pokemon.name}} </h2>
+          <p class="{{type}}" *ngFor="let type of pokemon.type">{{type}}</p>
+        </div>      
+      </li>
+    </ul>
+  </section>
+</main>
+
+<div *ngIf="selectedPokemon" class="modal">
+  <div class="content-container">
+    <img class="ImgSelected" src="{{selectedPokemon.photo}}" alt="">
+    <h2>{{selectedPokemon.name}}</h2>
+    <p class="descriptionPkmn">{{selectedPokemon.description}}</p>
+    <button class="btn__close" (click)="closeModal()">Fechar</button>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
